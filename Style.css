@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+body{
+    color: white;
+    font-family: 'Aboreto', cursive;
+    background-image: url(./Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
+    background-size: cover;
+}
