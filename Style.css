@@ -1,9 +1,128 @@
 h1{
     text-align: center;
-}
-body{
     color: white;
+    margin-bottom: 25px;
+}
+/*Body*/
+#Credentials-Body{
+    color: black;
     font-family: 'Aboreto', cursive;
     background-image: url(./Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
     background-size: cover;
+    text-align: center;
+    line-height: 2.5;
+}
+#List-body{
+    background-image: url(./Images/pandav-tank-88-KbSZbuEc-unsplash.jpg);
+    background-size: cover;
+    color: black;
+    line-height: 2.5;
+    text-align: center;
+}
+
+/*Inputs*/
+
+/*Inputs for List*/
+list-item[type="text"], list-item[type="listItem"]{
+    padding-left: 30px;
+}
+.list-item{
+    position: relative;
+    display: block;
+}
+.list-item i{
+    position: relative;
+    left: 25px;
+    bottom: -2px;
+}
+
+/*Inputs for Register & Login*/
+input[type="text"], input[type="password"]{
+    padding-left: 30px;
+    border-radius: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: -10px;
+    padding-right: 10px;
+    font-family: 'Aboreto', cursive;
+}
+.input{
+    position: relative;
+    display: block;
+}
+.input i{
+    position: relative;
+    left: 25px;
+    bottom: -2px;
+}
+
+/*Navbar*/
+nav{
+    display:flex;
+    justify-content: center;
+    border-width: 2px;
+    border-style: solid;
+    color: rgba(0, 0, 0, 0.5);
+    border-color: aliceblue;
+    border-radius: 50px;
+    background-color: aliceblue;
+    width: fit-content;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.nav-link{
+    display: inline-block;
+    padding: 3px;
+    transition: transform 0.3s ease;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Aboreto', cursive;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-link:hover {
+    transform: translateY(-5px);
+}
+
+/*Input button*/
+input[type="submit"]{
+    padding: 6px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+input[type="submit"]:hover{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: scale(1.25); 
+}
+/*box*/
+.box-list{
+    background-image: url(./Images/Paper.jpg);
+    background-size: cover;
+    padding: 30px;
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.8);
+}
+.box{
+   background-color: rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.8);
+}
+footer{
+    margin-top: 500px;
+    color: rgba(0,0,0,0);
+
+}
+footer a:visited{
+    color:rgba(0,0,0,0);
 }

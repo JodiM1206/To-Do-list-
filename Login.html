@@ -1,4 +1,3 @@
-<!-- TODO: Add CSS styling -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +7,30 @@
     <link rel="stylesheet" href="Style.css">
     <link rel="icon" href="./Images/monika-grabkowska-nVoDL1YDWRE-unsplash.jpg" type="image/icon">
     <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body id="Credentials-Body">
   <header>
     <h1>Nice to see you back!</h1>
-    <nav>
-      <a href="Register.html">Register</a>
-      <a href="List.html">List</a>
-    </nav>
   </header>
   <main>
+    <nav>
+      <a class="nav-link" href="Register.html">Register</a>
+      <a class="nav-link" href="List.html">List</a>
+    </nav>
+    <div class="box">
     <form>
-      <label for="uname">Username</label>
-      <input type="text" id="uname" name="uname">
-      <label for="passwd">Password</label>
-      <input type="password" id="passwd" name="passwd">
+      <div class="input">
+        <i class="fa-regular fa-user"></i>
+        <input type="text" id="uname" name="uname" placeholder="Username">
+      </div>
+      <div class="input">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="passwd" name="passwd" placeholder="Password">
+      </div>
       <input type="submit" value="Login">
     </form>
+    </div>
   </main>
 </body>
 </html>
