@@ -19,11 +19,11 @@ A LIST may have a REMINDER. A REMINDER must have exactly one LIST.
 A LIST may contain many items. An ITEM must be contained in exactly one LIST.  
 A BINDER may contain many LISTS. A Iist must be contained in exactly one BINDER.  
 
-![To-Do List ERD](Images/To_Do_List_ERD.png)  
+![To-Do List ERD](/procrastinot_frontend/Images/To_Do_List_ERD.png)  
 
 
 ## Relational Schema  
 
 Based on the ERD presented above, here is the relational schema for the To Do List application. Item and Reminders are connected to List via foreign key ListID. List itself is connected to Binder via the foreign key BinderID. Finally Binder is connected to User via the UserID foreign key. All relations satisfy 1st normal form due to all attributes being atomic. They also satify 2nd normal form automatically since there are no composite keys, and they satisfy 3rd normal form due to no transitive dependencies being present.  
 
-![To-Do-List Relations Schema](Images/To_Do_List_Relations.png)
+![To-Do-List Relations Schema](/procrastinot_frontend/Images/To_Do_List_Relations.png)
