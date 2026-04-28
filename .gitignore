@@ -1,45 +1,10 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Node.js (for when you set it up)
+node_modules/
+.env
 
-# Ignore Maven build artifacts
-procrastinot_backend/target/
-
-# Ignore local Maven wrapper binaries
-procrastinot_backend/.mvn/wrapper/maven-wrapper.jar
-
-# (Optional) If you use an IDE like IntelliJ or Eclipse
-.idea/
-*.iml
-.settings/
-.project/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code
 .vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
