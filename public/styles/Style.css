@@ -7,13 +7,13 @@ h1{
 #Credentials-Body{
     color: black;
     font-family: 'Aboreto', cursive;
-    background-image: url(./Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
+    background-image: url(/public/Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
     background-size: cover;
     text-align: center;
     line-height: 2.5;
 }
 #List-body{
-    background-image: url(./Images/pandav-tank-88-KbSZbuEc-unsplash.jpg);
+    background-image: url(/public/Images/pandav-tank-88-KbSZbuEc-unsplash.jpg);
     background-size: cover;
     color: black;
     line-height: 2.5;
@@ -102,7 +102,7 @@ input[type="submit"]:hover{
 }
 /*box*/
 .box-list{
-    background-image: url(./Images/Paper.jpg);
+    background-image: url(/public/Images/Paper.jpg);
     background-size: cover;
     padding: 30px;
     width: 300px;

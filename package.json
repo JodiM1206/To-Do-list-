@@ -1,0 +1,35 @@
+{
+  "name": "procrastinot",
+  "version": "1.0.0",
+  "description": "A task and list management application",
+  "keywords": [
+    "todo",
+    "tasks",
+    "lists",
+    "productivity"
+  ],
+  "homepage": "https://github.com/JodiM1206/To-Do-list-#readme",
+  "bugs": {
+    "url": "https://github.com/JodiM1206/To-Do-list-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JodiM1206/To-Do-list-.git"
+  },
+  "license": "ISC",
+  "author": "Denzel Discua",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "i": "^0.3.7",
+    "nodemon": "^3.1.14"
+  }
+}

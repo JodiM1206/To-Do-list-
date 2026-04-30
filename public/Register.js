@@ -1,4 +1,4 @@
-import User from "./User.js";
+import User from "./User";
 let form = document.getElementById("registerForm");
 form.addEventListener('submit', register);
 function register(e){
