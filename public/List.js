@@ -1,7 +1,6 @@
-let listForm = document.getElementById("listForm");
-listForm.addEventListener('submit', list);
-function list(e){
-    e.preventDefault();
-    let item = document.getElementById("listItem").value;
-    console.log(item);
+class List {
+    constructor(title, list_description, binder_id) {
+        this.title = title;
+        this.list_description = list_description;
+    }
 }

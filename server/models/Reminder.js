@@ -8,7 +8,7 @@ async function createReminderTable() {
       remind_in ENUM ( 'never', 'daily', 'weekly', 'monthly', 'yearly') DEFAULT 'never',
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
       list_id INT NOT NULL,
-      CONSTRAINT reminder_list_id FOREIGN KEY (list_id) REFERENCES to_do_list(list_id)
+      CONSTRAINT reminder_list_id FOREIGN KEY (list_id) REFERENCES to_do_list(list_id) ON DELETE CASCADE
       ); `
 
     await con.query(sql)
