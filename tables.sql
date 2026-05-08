@@ -9,26 +9,12 @@ email VARCHAR(250) NOT NULL,
 user_passwd VARCHAR(250) NOT NULL,
 username VARCHAR(250) NOT NULL
 );
-CREATE TABLE IF NOT EXISTS binder (
-binder_id INT AUTO_INCREMENT PRIMARY KEY,
-tag VARCHAR(50),
-binder_name VARCHAR(250),
-user_id INT NOT NULL,
-CONSTRAINT binder_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
-);
-CREATE TABLE IF NOT EXISTS to_do_list (
-list_id INT AUTO_INCREMENT PRIMARY KEY,
-title VARCHAR(50) NOT NULL,
-list_description VARCHAR(300),
-binder_id INT NOT NULL,
-CONSTRAINT list_binder_id FOREIGN KEY (binder_id) REFERENCES binder(binder_id) ON DELETE CASCADE
-);
 CREATE TABLE IF NOT EXISTS item (
 item_id INT AUTO_INCREMENT PRIMARY KEY,
 item_name VARCHAR(150) NOT NULL,
 item_status BOOLEAN DEFAULT 0,
-deadline DATETIME,
+deadline DATE,
 remind_in ENUM ( 'never', 'daily', 'weekly', 'monthly', 'yearly') DEFAULT 'never',
-list_id INT NOT NULL,
-CONSTRAINT item_list_id FOREIGN KEY (list_id) REFERENCES to_do_list(list_id) ON DELETE CASCADE
+user_id INT NOT NULL,
+CONSTRAINT item_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );

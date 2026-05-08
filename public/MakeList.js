@@ -37,3 +37,8 @@ listForm.addEventListener('submit', function(e){
     const createItem = new Item(item, false, deadline, reminderSelect.value);
     console.log (createItem.toString());
 });
+document.getElementById('deleteAccount').addEventListener('click', function() {
+    if(confirm('Are you sure you want to delete your account? This cannot be undone!')) {
+        console.log('Account deleted');
+    }
+});

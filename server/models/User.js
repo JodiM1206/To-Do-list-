@@ -16,6 +16,8 @@ async function createUserTable() {
 }
 
 createUserTable()
+
+// Login function
 /*
 {
   email: Bob@Bobby.com,
@@ -27,12 +29,12 @@ async function login(user) {
   let cUser = await getUserByEmail(user.email)
   if(!cUser) throw Error("Email not found!")
   
-  let match = await bcrypt.compare(user.password, cUser.password)
+  let match = await bcrypt.compare(user.user_passwd, cUser.user_passwd)
   if(!match) throw Error("Password Incorrect!")
   
   return cUser
 }
-
+//Get all function
 async function getUserByEmail(email) {
   let sql = `
     SELECT * FROM users
@@ -63,14 +65,14 @@ async function register(user) {
   let cUser = await getUserByEmail(user.email)
   if(cUser) throw Error("Email already in use!")
 
-  let hashedPassword = await bcrypt.hash(user.password, 10)
+  let hashedPassword = await bcrypt.hash(user.user_passwd, 10)
   
   let sql = `
-    INSERT INTO User(first_name, last_name, user_passwd, email)
-    VALUES(?, ?, ?, ?)
+    INSERT INTO users(first_name, last_name, user_passwd, email, username)
+    VALUES(?, ?, ?, ?, ?)
   `
 
-  await con.query(sql, [user.firstName, user.lastName, hashedPassword, user.email])
+  await con.query(sql, [user.first_name, user.last_name, hashedPassword, user.email, user.username])
   return await login(user)
 }
 

@@ -12,19 +12,20 @@
 </head>
 <body id="List-body">
   <header>
+    <button id="deleteAccount">Delete Account</button>
     <h1>Workstation</h1>
   </header>
   <main>
     <nav>
-      <a class="nav-link" href="Login.html">Login</a>
+      <a class="nav-link" href="Login.html">Log Out</a>
     </nav>
     <div class="box-list">
     <form id="listForm">
       <div class="list-item">
         <i class="fa-solid fa-pencil"   aria-hidden="true"></i>
         <input type="text" id="listItem" name="listItem" placeholder="Item..." required>
-        <input type="date" id="deadline" name="deadline">
-        <select id="remindIn" name="remindIn">
+        <input type="date" id="deadline" name="deadline" aria-label="deadline">
+        <select id="remindIn" name="remindIn" aria-label="remind me in">
           <option value="" disabled selected>Remind me in...</option>
           <option value="never">Never</option>
           <option value="daily">Daily</option>
