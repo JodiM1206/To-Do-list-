@@ -19,7 +19,7 @@ Based on the ERD presented above, here is the relational schema for the To Do Li
 
 ![To-Do-List Relations Schema](/public/Images/To_Do_List_Relations.png)
 
-## PLanned Features
+## Planned Features
 - Binder organization
 - List management
 - Reminder notifications
