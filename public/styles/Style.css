@@ -3,17 +3,33 @@ h1{
     color: white;
     margin-bottom: 25px;
 }
+#deleteAccount {
+    position: absolute;
+    left: 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: 'Aboreto', cursive;
+    transition: transform 0.3s ease;
+}
+#deleteAccount:hover {
+    transform: scale(1.25);
+}
+
 /*Body*/
 #Credentials-Body{
     color: black;
     font-family: 'Aboreto', cursive;
-    background-image: url(./Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
+    background-image: url(/public/Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
     background-size: cover;
     text-align: center;
     line-height: 2.5;
 }
 #List-body{
-    background-image: url(./Images/pandav-tank-88-KbSZbuEc-unsplash.jpg);
+    background-image: url(/public/Images/scott-webb-xhceK61Zv2g-unsplash.jpg);
     background-size: cover;
     color: black;
     line-height: 2.5;
@@ -23,17 +39,50 @@ h1{
 /*Inputs*/
 
 /*Inputs for List*/
-list-item[type="text"], list-item[type="listItem"]{
+.list-item[type="text"], list-item[type="listItem"], input[type="date"]{
     padding-left: 30px;
+    display: flex;
+    margin: auto;
+
+}
+input[type="date"],select{
+    padding-left: 30px;
+    border-radius: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: -10px;
+    padding-right: 10px;
+    font-family: 'Aboreto', cursive;
 }
 .list-item{
     position: relative;
     display: block;
+    margin-bottom: 10px;
 }
 .list-item i{
     position: relative;
     left: 25px;
     bottom: -2px;
+}
+#list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 /*Inputs for Register & Login*/
@@ -94,7 +143,7 @@ input[type="submit"]{
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.1s ease, background-color 0.1s ease;
 }
 input[type="submit"]:hover{
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -102,7 +151,7 @@ input[type="submit"]:hover{
 }
 /*box*/
 .box-list{
-    background-image: url(./Images/Paper.jpg);
+    background-color: rgba(226, 211, 211, 0.5);
     background-size: cover;
     padding: 30px;
     width: 300px;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="/public/styles/Style.css">
+    <link rel="icon" href="/public/Images/vicky-ng-yL9qjDDmmMU-unsplash.jpg" type="image/icon">
+    <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="module" src="MakeList.js"></script>
+</head>
+<body id="List-body">
+  <header>
+    <button id="deleteAccount">Delete Account</button>
+    <h1>Workstation</h1>
+  </header>
+  <main>
+    <nav>
+      <a class="nav-link" href="Login.html">Log Out</a>
+    </nav>
+    <div class="box-list">
+    <form id="listForm">
+      <div class="list-item">
+        <i class="fa-solid fa-pencil"   aria-hidden="true"></i>
+        <input type="text" id="listItem" name="listItem" placeholder="Item..." required>
+        <input type="date" id="deadline" name="deadline" aria-label="deadline">
+        <select id="remindIn" name="remindIn" aria-label="remind me in">
+          <option value="" disabled selected>Remind me in...</option>
+          <option value="never">Never</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+      <input type="submit" value="Ring it up!"> 
+    </form>
+    <ul id ="list"></ul>
+    </div>
+  </main>    
+</body>
+</html>
