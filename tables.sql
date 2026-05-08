@@ -23,18 +23,12 @@ list_description VARCHAR(300),
 binder_id INT NOT NULL,
 CONSTRAINT list_binder_id FOREIGN KEY (binder_id) REFERENCES binder(binder_id) ON DELETE CASCADE
 );
-CREATE TABLE IF NOT EXISTS reminder (
-remind_id INT AUTO_INCREMENT PRIMARY KEY,
-remind_in ENUM ( 'never', 'daily', 'weekly', 'monthly', 'yearly') DEFAULT 'never',
-created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-list_id INT NOT NULL,
-CONSTRAINT reminder_list_id FOREIGN KEY (list_id) REFERENCES to_do_list(list_id) ON DELETE CASCADE
-);
 CREATE TABLE IF NOT EXISTS item (
 item_id INT AUTO_INCREMENT PRIMARY KEY,
 item_name VARCHAR(150) NOT NULL,
 item_status BOOLEAN DEFAULT 0,
 deadline DATETIME,
+remind_in ENUM ( 'never', 'daily', 'weekly', 'monthly', 'yearly') DEFAULT 'never',
 list_id INT NOT NULL,
 CONSTRAINT item_list_id FOREIGN KEY (list_id) REFERENCES to_do_list(list_id) ON DELETE CASCADE
 );

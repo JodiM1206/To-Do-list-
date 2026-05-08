@@ -7,6 +7,6 @@ export default class User{
         this.password = password;
     }
     toString(){
-        return `User: ${this.firstName} ${this.lastName}, ${this.username}, ${this.email}`;
+        return `User: ${this.firstName}, ${this.lastName}, ${this.username}, ${this.email}, ${this.password}`;
     }
 }

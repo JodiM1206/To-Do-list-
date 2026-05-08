@@ -12,21 +12,30 @@
 </head>
 <body id="List-body">
   <header>
-    <h1>List!</h1>
+    <h1>Workstation</h1>
   </header>
   <main>
     <nav>
-      <a class="nav-link" href="Register.html">Register</a>
       <a class="nav-link" href="Login.html">Login</a>
     </nav>
     <div class="box-list">
     <form id="listForm">
       <div class="list-item">
-        <i class="fa-solid fa-pencil"></i>
-        <input type="text" id="listItem" name="listItem" placeholder="Item...">
+        <i class="fa-solid fa-pencil"   aria-hidden="true"></i>
+        <input type="text" id="listItem" name="listItem" placeholder="Item..." required>
+        <input type="date" id="deadline" name="deadline">
+        <select id="remindIn" name="remindIn">
+          <option value="" disabled selected>Remind me in...</option>
+          <option value="never">Never</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
       </div>
       <input type="submit" value="Ring it up!"> 
     </form>
+    <ul id ="list"></ul>
     </div>
   </main>    
 </body>
