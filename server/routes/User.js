@@ -41,4 +41,13 @@ router
    
 })
 
+.patch('/updateUser/:user_id', async (req, res) => {
+    try {
+        await User.updateUser(req.params.user_id, req.body)
+        res.send({ message: "User updated!" })
+    } catch (err) {
+        res.status(401).send({ message: err.message })
+    }
+})
+
 module.exports = router

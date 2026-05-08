@@ -85,4 +85,21 @@ async function deleteUser(user_id) {
     await query(sql, [user_id])
 }
 
-module.exports = { getAllUsers, login, register, deleteUser}
+//Update User function
+/*
+{
+    first_name: "Bob",
+    last_name: "Bobby",
+    username: "BobName",
+}
+*/
+async function updateUser(user_id, user){
+  let sql = `
+    UPDATE users
+    SET first_name = ?, last_name = ?, username = ?
+    WHERE user_id = ?
+  `
+  await query(sql, [user.first_name, user.last_name, user.username, user_id])
+}
+
+module.exports = { getAllUsers, login, register, deleteUser, updateUser}
