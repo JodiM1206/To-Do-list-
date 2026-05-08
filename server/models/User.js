@@ -1,4 +1,4 @@
-const con = require("./db_connect")
+const {query} = require("./db_connect")
 const bcrypt = require("bcrypt")
 
 async function createUserTable() {
@@ -12,7 +12,7 @@ async function createUserTable() {
       username VARCHAR(250) NOT NULL
       );`
 
-    await con.query(sql)
+    await query(sql)
 }
 
 createUserTable()
@@ -40,7 +40,7 @@ async function getUserByEmail(email) {
     SELECT * FROM users
     WHERE email=?
   `
-  let cUser = await con.query(sql, [email])
+  let cUser = await query(sql, [email])
   return cUser[0]
 }
 
@@ -48,7 +48,7 @@ async function getAllUsers() {
     let sql = `
       SELECT * FROM users;
     `           
-    return await con.query(sql)
+    return await query(sql)
 }
 
 // Register function
@@ -72,7 +72,7 @@ async function register(user) {
     VALUES(?, ?, ?, ?, ?)
   `
 
-  await con.query(sql, [user.first_name, user.last_name, hashedPassword, user.email, user.username])
+  await query(sql, [user.first_name, user.last_name, hashedPassword, user.email, user.username])
   return await login(user)
 }
 
@@ -82,6 +82,7 @@ async function deleteUser(user_id) {
     DELETE FROM users
     WHERE user_id=?
     `
-    await con.query(sql, [user_id])
+    await query(sql, [user_id])
 }
+
 module.exports = { getAllUsers, login, register, deleteUser}
