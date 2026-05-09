@@ -6,7 +6,7 @@ router
 .post ('/createItem', async (req, res) => {
     try {
         await Item.createItem(req.body, req.body.user_id)
-        res.send("Item Created!")
+        res.json({ message: "Item Created!" })
     }
     catch (err) {
         res.status(401).send({ message: err.message })  

@@ -20,14 +20,14 @@ createUserTable()
 // Login function
 /*
 {
-  email: Bob@Bobby.com,
+  username: bobRulez
   user_passwd: "password",
 }
 */
 
 async function login(user) {
-  let cUser = await getUserByEmail(user.email)
-  if(!cUser) throw Error("Email not found!")
+  let cUser = await getUserByUsername(user.username)
+  if(!cUser) throw Error("User not found!")
   
   let match = await bcrypt.compare(user.user_passwd, cUser.user_passwd)
   if(!match) throw Error("Password Incorrect!")
@@ -35,6 +35,15 @@ async function login(user) {
   return cUser
 }
 //Get all function
+async function getUserByUsername(username) {
+  let sql = `
+    SELECT * FROM users
+    WHERE username=?
+  `
+  let cUser = await query(sql, [username])
+  return cUser[0]
+}
+
 async function getUserByEmail(email) {
   let sql = `
     SELECT * FROM users

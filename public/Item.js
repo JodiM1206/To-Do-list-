@@ -1,7 +1,7 @@
 export default class Item {
     constructor(item_name, item_status, deadline, remind_in) {
         this.item_name = item_name;
-        this.item_status = item_status;
+        this.item_status = false;
         this.deadline = deadline;
         this.remind_in = remind_in;
     }

@@ -10,3 +10,15 @@ export default class User{
         return `User: ${this.firstName}, ${this.lastName}, ${this.username}, ${this.email}, ${this.password}`;
     }
 }
+
+    export function setCurrentUser(user) {
+        localStorage.setItem('user', JSON.stringify(user));
+    }
+
+    export function getCurrentUser(){
+        return JSON.parse(localStorage.getItem('user'));
+    }
+    export function removeCurrentUser(){
+        localStorage.removeItem('user');
+        window.location.href = 'Login.html';
+    }

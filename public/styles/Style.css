@@ -23,13 +23,13 @@ h1{
 #Credentials-Body{
     color: black;
     font-family: 'Aboreto', cursive;
-    background-image: url(/public/Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
+    background-image: url(/Images/marcel-strauss-rd9bLSvglVI-unsplash.jpg);
     background-size: cover;
     text-align: center;
     line-height: 2.5;
 }
 #List-body{
-    background-image: url(/public/Images/scott-webb-xhceK61Zv2g-unsplash.jpg);
+    background-image: url(/Images/scott-webb-xhceK61Zv2g-unsplash.jpg);
     background-size: cover;
     color: black;
     line-height: 2.5;
@@ -132,6 +132,32 @@ nav{
 }
 .nav-link:hover {
     transform: translateY(-5px);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 3px 10px;
+    transition: transform 0.3s ease;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Aboreto', cursive;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    transform: translateY(-5px);
+}
+
+nav ul li a#logout {
+    cursor: pointer;
 }
 
 /*Input button*/

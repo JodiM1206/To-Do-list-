@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/public/styles/Style.css">
-    <link rel="icon" href="/public/Images/monika-grabkowska-nVoDL1YDWRE-unsplash.jpg" type="image/icon">
+    <link rel="stylesheet" href="/styles/Style.css">
+    <link rel="icon" href="/Images/monika-grabkowska-nVoDL1YDWRE-unsplash.jpg" type="image/icon">
     <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script type="module" src="./User.js"></script>
+    <script type="module" src="/main.js"></script>
     <script type="module" src="./Login.js"></script>
 
 </head>
@@ -17,9 +17,7 @@
     <h1>Nice to see you back!</h1>
   </header>
   <main>
-    <nav>
-      <a class="nav-link" href="./Register.html">Register</a>
-    </nav>
+    <nav></nav>
     <div class="box">
     <form id="loginForm">
       <div class="input">
@@ -30,6 +28,7 @@
         <i class="fa-solid fa-lock"></i>
         <input type="password" id="passwd" name="passwd" placeholder="Password">
       </div>
+      <p id="error" style="color: red;"></p>
       <input type="submit" value="Login">
     </form>
     </div>
